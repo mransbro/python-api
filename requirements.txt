@@ -1,0 +1,9 @@
+click==7.1.2
+Flask==1.1.2
+itsdangerous==1.1.0
+Jinja2==2.11.2
+MarkupSafe==1.1.1
+marshmallow==2.18.0
+marshmallow-jsonapi==0.23.2
+six==1.15.0
+Werkzeug==1.0.1
