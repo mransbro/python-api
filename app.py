@@ -10,15 +10,15 @@ days = [
     {"id": 7, "name": "Sunday"},
 ]
 
-api = Flask(__name__)
+app = Flask(__name__)
 
 
-@api.route("/", methods=["GET"])
+@app.route("/", methods=["GET"])
 def get_days():
     return jsonify(days)
 
 
-@api.route("/<int:day_id>", methods=["GET"])
+@app.route("/<int:day_id>", methods=["GET"])
 def get_day(day_id):
     day = [day for day in days if day["id"] == day_id]
     if len(day) == 0:
@@ -26,7 +26,7 @@ def get_day(day_id):
     return jsonify({"day": day[0]})
 
 
-@api.route("/", methods=["POST"])
+@app.route("/", methods=["POST"])
 def post_days():
     return jsonify({"success": True}), 201
 
